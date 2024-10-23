@@ -8,11 +8,6 @@
   </head>
   <body>
     <ul class="gallery js-gallery"></ul>
-
-    <!--
-      Модальное окно для полноразмерного изображения
-      Для того чтобы открыть, необходимо добавить на div.lightbox CSS-класс is-open
-    -->
     <div class="lightbox js-lightbox">
       <div class="lightbox__overlay"></div>
 
@@ -24,7 +19,10 @@
         type="button"
         class="lightbox__button"
         data-action="close-lightbox"
-      ></button>
+        id="closeModal"
+      >
+        <img src="/html/hw-1.png" width="20" height="20" alt="" />
+      </button>
     </div>
     <script src="/js/hw-1.js"></script>
   </body>
