@@ -31,15 +31,44 @@
     <!-- <p class="output">Selected color: </p>
     <div class="color-palette"></div> -->
 
-    <h2>To Do List</h2>
+    <!-- <h2>To Do List</h2>
     <form id="taskForm">
       <label for="newTask">New task</label>
       <input type="text" id="newTask">
       <button type="submit" id="addTask">Add task</button>
     </form>
-    <ul id="taskList"></ul>
+    <ul id="taskList"></ul> -->
 
     <!-- theme 2 -->
-    <script src="/script.js"></script>
+
+    <!-- <div class="output"></div> -->
+    <!-- <p class="cta">Scroll me!</p>
+    <div class="event-counter">
+      <div class="box">
+        <p class="text">Number of scroll events</p>
+        <span class="output">0</span>
+      </div>
+    </div> -->
+
+    <p class="cta">Scroll me!</p>
+    <div class="event-counter">
+      <div class="box">
+        <p class="text">No timing function</p>
+        <span class="output vanilla">0</span>
+      </div>
+
+      <div class="box">
+        <p>Throttle</p>
+        <span class="output throttle">0</span>
+      </div>
+
+      <div class="box">
+        <p>Debounce</p>
+        <span class="output debounce">0</span>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+"use strict";
 // theme 1
 
 // const parent = document.querySelector('#parent')
@@ -80,39 +81,88 @@
 
 // todolist
 
-const taskForm = document.getElementById("taskForm");
-const newTaskInput = document.getElementById("newTask");
-const taskList = document.getElementById("taskList");
+// const taskForm = document.getElementById("taskForm");
+// const newTaskInput = document.getElementById("newTask");
+// const taskList = document.getElementById("taskList");
 
-taskForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+// taskForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-  const taskText = newTaskInput.value.trim();
-  if (taskText !== "") {
-    addTask(taskText);
-    newTaskInput.value = "";
-  }
+//   const taskText = newTaskInput.value.trim();
+//   if (taskText !== "") {
+//     addTask(taskText);
+//     newTaskInput.value = "";
+//   }
+// });
+// function addTask(taskText) {
+//   const li = document.createElement("li");
+
+//   li.innerHTML = `
+//       <input type="checkbox" class="comleteTask">
+//       <span>${taskText}</span>
+//       <button class="deleteTask"> 💩</button>
+//   `;
+//   taskList.appendChild(li);
+// }
+// taskList.addEventListener("click", (e) => {
+//   if (e.target.classList.contains("deleteTask")) {
+//     e.target.parentElement.remove();
+//   }
+//   if (e.target.classList("comleteTask")) {
+//     const task = e.target.nextElementSibling;
+//     task.style.textDecoration = e.target.checked ? "line-trought" : "none";
+//   }
+//   if (e.target.checked) {
+//     const task = e.target.nextElementSibling;
+//     task.style.backgroundColor = "green";
+//   }
+// });
+
+// theme 2
+
+// console.log(_);
+// console.log(_.sum([1, 2, 3]));
+
+// window.addEventListener(
+//   "scroll",
+//   _.throttle(() => {
+//     console.log("scroll 300ms");
+//   }, 100)
+// );
+// const output = document.querySelector(".output");
+// let scrollCounter = 0;
+// document.addEventListener("scroll", () => {
+//   scrollCounter += 1;
+//   output.textContent = scrollCounter;
+// });
+
+const vanillaOutput = document.querySelector(".output.vanilla");
+const throttleOutput = document.querySelector(".output.throttle");
+const debounceOutput = document.querySelector(".output.debounce");
+
+const eventCounter = {
+  vanilla: 0,
+  throttle: 0,
+  debounce: 0,
+};
+
+document.addEventListener("scroll", () => {
+  eventCounter.vanilla++;
+  vanillaOutput.textContent = eventCounter.vanilla;
 });
-function addTask(taskText) {
-  const li = document.createElement("li");
 
-  li.innerHTML = `
-      <input type="checkbox" class="comleteTask">
-      <span>${taskText}</span>
-      <button class="deleteTask"> 💩</button>
-  `;
-  taskList.appendChild(li);
-}
-taskList.addEventListener("click", (e) => {
-  if (e.target.classList.contains("deleteTask")) {
-    e.target.parentElement.remove();
-  }
-  if (e.target.classList("comleteTask")) {
-    const task = e.target.nextElementSibling;
-    task.style.textDecoration = e.target.checked ? "line-trought" : "none";
-  }
-  if (e.target.checked) {
-    const task = e.target.nextElementSibling;
-    task.style.backgroundColor = "green";
-  }
-});
+document.addEventListener(
+  "scroll",
+  _.throttle(() => {
+    eventCounter.throttle++;
+    throttleOutput.textContent = eventCounter.throttle;
+  }, 3000)
+);
+
+document.addEventListener(
+  "scroll",
+  _.debounce(() => {
+    eventCounter.debounce++;
+    debounceOutput.textContent = eventCounter.debounce;
+  }, 300)
+);

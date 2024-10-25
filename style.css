@@ -58,7 +58,7 @@
     transform: scale(1.1);
 } */
 
-ul{
+/* ul{
     list-style: none;
     padding: 20px;
 }
@@ -76,6 +76,77 @@ li{
 }
 .deleteTask{
     cursor: pointer;
-}
+} */
 
 /* theme 2 */
+
+/* body{
+    height: 5000vh;
+    background-color: azure;
+    color: #212121;
+    font-family: 'Montserrat';
+    position: relative;
+}
+.cta{
+    text-align: center;
+    font-size: 22px;
+}
+.event-counter{
+    border: 1px solid rgb(28, 14, 90);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    position: fixed;
+    left: 350px;
+
+}
+.text{
+    font-size: 20px;
+}
+.output{
+    display: block;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: blue;
+    font-weight: 900;
+} */
+
+body {
+  height: 5000vh;
+  background-color: azure;
+  color: #212121;
+  font-family: "Montserrat";
+  position: relative;
+}
+.cta {
+  text-align: center;
+  font-size: 22px;
+  position: fixed;
+  left: 45%;
+}
+.event-counter {
+  position: fixed;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.box {
+  min-width: 200px;
+  border: 1px solid blue;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.output {
+  font-size: 24px;
+  color: blueviolet;
+  font-weight: 900;
+}
