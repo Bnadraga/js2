@@ -1,3 +1,10 @@
+body {
+  font-family: "Montserrat";
+}
+input {
+  font-family: "Montserrat";
+}
+
 /* theme 1 */
 
 /* #parent,
@@ -116,14 +123,7 @@ li{
     font-weight: 900;
 } */
 
-body {
-  height: 5000vh;
-  background-color: azure;
-  color: #212121;
-  font-family: "Montserrat";
-  position: relative;
-}
-.cta {
+/* .cta {
   text-align: center;
   font-size: 22px;
   position: fixed;
@@ -149,4 +149,4 @@ body {
   font-size: 24px;
   color: blueviolet;
   font-weight: 900;
-}
+} */

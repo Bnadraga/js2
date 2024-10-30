@@ -136,33 +136,57 @@
 //   output.textContent = scrollCounter;
 // });
 
-const vanillaOutput = document.querySelector(".output.vanilla");
-const throttleOutput = document.querySelector(".output.throttle");
-const debounceOutput = document.querySelector(".output.debounce");
+// const vanillaOutput = document.querySelector(".output.vanilla");
+// const throttleOutput = document.querySelector(".output.throttle");
+// const debounceOutput = document.querySelector(".output.debounce");
 
-const eventCounter = {
-  vanilla: 0,
-  throttle: 0,
-  debounce: 0,
-};
+// const eventCounter = {
+//   vanilla: 0,
+//   throttle: 0,
+//   debounce: 0,
+// };
 
-document.addEventListener("scroll", () => {
-  eventCounter.vanilla++;
-  vanillaOutput.textContent = eventCounter.vanilla;
-});
+// document.addEventListener("scroll", () => {
+//   eventCounter.vanilla++;
+//   vanillaOutput.textContent = eventCounter.vanilla;
+// });
 
-document.addEventListener(
-  "scroll",
-  _.throttle(() => {
-    eventCounter.throttle++;
-    throttleOutput.textContent = eventCounter.throttle;
-  }, 3000)
-);
+// document.addEventListener(
+//   "scroll",
+//   _.throttle(() => {
+//     eventCounter.throttle++;
+//     throttleOutput.textContent = eventCounter.throttle;
+//   }, 3000)
+// );
 
-document.addEventListener(
-  "scroll",
-  _.debounce(() => {
-    eventCounter.debounce++;
-    debounceOutput.textContent = eventCounter.debounce;
-  }, 300)
-);
+// document.addEventListener(
+//   "scroll",
+//   _.debounce(() => {
+//     eventCounter.debounce++;
+//     debounceOutput.textContent = eventCounter.debounce;
+//   }, 300)
+// );
+
+// function handleInput(ev) {
+//   const text = ev.target.value;
+//   console.log("Відправка на сервер: ", text);
+// }
+// const throttleInput = _.throttle(handleInput, 500)
+// const input = document.getElementById("input");
+// input.addEventListener('input', throttleInput)
+
+// function stopMove(ev) {
+//   console.log("x: ", ev.clientX, "y: ", ev.clientY);
+// }
+// const debounceMove = _.debounce(stopMove, 100);
+// document.addEventListener("mousemove", debounceMove);
+
+const text = document.getElementById('text')
+const input = document.getElementById('input')
+
+function handleInput(ev) {
+  const handleText = ev.target.value;
+  text.textContent = `Вітаємо, ${handleText}!`
+}
+const debounceInput = _.debounce(handleInput, 500);
+input.addEventListener('input', debounceInput)
