@@ -181,12 +181,45 @@
 // const debounceMove = _.debounce(stopMove, 100);
 // document.addEventListener("mousemove", debounceMove);
 
-const text = document.getElementById('text')
-const input = document.getElementById('input')
+// const text = document.getElementById('text')
+// const input = document.getElementById('input')
 
-function handleInput(ev) {
-  const handleText = ev.target.value;
-  text.textContent = `Вітаємо, ${handleText}!`
-}
-const debounceInput = _.debounce(handleInput, 500);
-input.addEventListener('input', debounceInput)
+// function handleInput(ev) {
+//   const handleText = ev.target.value;
+//   text.textContent = `Вітаємо, ${handleText}!`
+// }
+// const debounceInput = _.debounce(handleInput, 500);
+// input.addEventListener('input', debounceInput)
+
+// function updateCoordinants(ev) {
+//   const graph = document.getElementById("graph");
+//   const point = document.getElementById("point");
+//   const coordDisp = document.getElementById("coord");
+
+//   const rect = graph.getBoundingClientRect();
+//   const x = ev.clientX - rect.left;
+//   const y = ev.clientY - rect.top;
+
+//   point.setAttribute("cx", x);
+//   point.setAttribute("cy", y);
+
+//   coordDisp.textContent = `
+//   COORDINATS:
+//   x: ${x.toFixed(0)};
+//   y: ${y.toFixed(0)}`;
+// }
+
+// const throttleUptade = _.throttle(updateCoordinants, 50)
+// const graphEl = document.getElementById('graph')
+// graphEl.addEventListener('mousemove', throttleUptade)
+
+// const text = document.getElementById("text");
+// const plus = document.getElementById("plus");
+// const minus = document.getElementById("minus");
+
+// function updateText(change) {
+//   const currentText = parseInt(window.getComputedStyle(text).fontSize);
+//   text.style.fontSize = `${currentText + change}px`;
+// }
+// plus.addEventListener("click", updateText(2));
+// minus.addEventListener("click", updateText(-2));

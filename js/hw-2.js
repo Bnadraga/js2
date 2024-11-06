@@ -12,3 +12,19 @@ input.addEventListener(
 );
 
 // task 2
+
+function updateCoordinants(ev) {
+  const body = document.body;
+  const box = document.getElementById("box");
+
+  const rect = body.getBoundingClientRect();
+  const x = ev.clientX - rect.left;
+  const y = ev.clientY - rect.top;
+
+  box.style.left = `${x}px`;
+  box.style.top = `${y}px`;
+}
+
+const debounceUptade = _.debounce(updateCoordinants, 100);
+const body = document.body;
+body.addEventListener("mousemove", debounceUptade);

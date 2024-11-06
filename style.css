@@ -150,3 +150,18 @@ li{
   color: blueviolet;
   font-weight: 900;
 } */
+
+/* #point{
+  transition: cx 200ms, cy 200ms;
+} */
+
+#text{
+  font-size: 30px;
+}
+button{
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
