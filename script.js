@@ -223,3 +223,18 @@
 // }
 // plus.addEventListener("click", updateText(2));
 // minus.addEventListener("click", updateText(-2));
+
+// theme 3
+
+// IntersectionObserver(callback, option);
+
+const options = {
+  rootMargin: "50px",
+  threshold: 0.25,
+};
+const onEntry = (entries, observer) => {
+  entries.forEach((entry) => {
+    // ...
+  });
+};
+const observer = new IntersectionObserver(onEntry, options);
