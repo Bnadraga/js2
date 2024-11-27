@@ -258,22 +258,25 @@
 //   observer.observe(img);
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const fruits = document.querySelectorAll(".fruits-list li");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const fruits = document.querySelectorAll(".fruits-list li");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const img = entry.target.querySelector("img");
-      const title = entry.target.querySelector("h3");
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       const img = entry.target.querySelector("img");
+//       const title = entry.target.querySelector("h3");
 
-      if (entry.isIntersecting) {
-        img.src = img.getAttribute("data-high-res");
-        entry.target.classList.add("visible");
-      } else {
-        img.src = img.src.replace("-1", "-2");
-        entry.target.classList.remove("visible");
-      }
-    });
-  });
-  fruits.forEach((fruit) => observer.observe(fruit));
-});
+//       if (entry.isIntersecting) {
+//         img.src = img.getAttribute("data-high-res");
+//         entry.target.classList.add("visible");
+//       } else {
+//         img.src = img.src.replace("-1", "-2");
+//         entry.target.classList.remove("visible");
+//       }
+//     });
+//   });
+//   fruits.forEach((fruit) => observer.observe(fruit));
+// });
+
+// theme 4
+
