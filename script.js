@@ -278,5 +278,6 @@
 //   fruits.forEach((fruit) => observer.observe(fruit));
 // });
 
-// theme 6
+// theme 7
+
 

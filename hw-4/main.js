@@ -12,6 +12,7 @@
 // console.log(test.hello())
 // console.log(test.goodbye())
 
-import { square, sqrt2 } from "./test.js";
-console.log(square(11));
-console.log(sqrt2(5, 7));
+// import { square, sqrt2 } from "./test.js";
+// console.log(square(11));
+// console.log(sqrt2(5, 7));
+
